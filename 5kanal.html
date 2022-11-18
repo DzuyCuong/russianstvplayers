@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>5TV</title>
+    <link rel=stylesheet href="//staticmv.mediavitrina.ru/dist/eump-core/v18.10.8/eump.min.css" type="text/css" />
+    <link href="//staticmv.mediavitrina.ru/vitrina_assets/v1.0.3/vitrina_preloader_logo.css" rel="stylesheet" type="text/css" />
+    <link rel=stylesheet href="//staticmv.mediavitrina.ru/dist/eump-vitrina/v2.6.2/eump-vitrina.min.css" type="text/css"/>
+    <style>
+        body, html {margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000000}
+        .eump-player {position: absolute; left: 0; right: 0; top: 0; bottom: 0}
+    </style>
+    <script>
+        window.EUMPConfig = {
+            assetsURL: "//staticmv.mediavitrina.ru/dist/eump-core/v18.10.8/",
+            plugins: [
+                'quality', 'com', 'ecto_live', 'sergeant', 'contextmenu',
+                'vitrina_stat', 'tracking', 'tns_counter', 'buffering_watchdog',
+                'epg', 'epg_ui', 'restrictions', 
+                'error_reporting', 'com_scheduler', 'com_schedule_loader'
+            ],
+            pluginsOpts: {},
+        };
+    </script>
+</head>
+<body>
+<div class="eump-player eump-ratio-16x9 eump-skin-5tv" id="player"></div>
+<script src="//staticmv.mediavitrina.ru/dist/eump-core/v18.10.8/eump.all.min.js"></script>
+<script src="//staticmv.mediavitrina.ru/dist/eump-vitrina/v2.6.2/eump-vitrina.min.js"></script>
+
+
+
+
+
+        <script>
+        if (window.EUMPConfig && window.EUMPConfig.plugins) {
+            window.EUMPConfig.plugins.push('teleport');
+        }
+        </script>
+                <script>
+            if (window.EUMPConfig && window.EUMPConfig.pluginsOpts) {
+                window.EUMPConfig.pluginsOpts.teleport = {
+    "apiKey": "c6d797d7998b9beb",
+    "dashApiKey": "6a6b1b22ae31fb52",
+    "hlsApiKey": "42036852bb7fd522"
+ }            }
+        </script>
+                <script>
+        if (window.EUMPConfig && window.EUMPConfig.plugins) {
+            window.EUMPConfig.plugins.push('remote');
+        }
+        </script>
+                <script>
+            if (window.EUMPConfig && window.EUMPConfig.pluginsOpts) {
+                window.EUMPConfig.pluginsOpts.remote = {
+    ignorePID: true,
+    allowDomains: ["mediavitrina.ru","*.mediavitrina.ru","1tv.ru","*.1tv.ru","cm.1tv.ru","*.cm.1tv.ru","stage.1tv.ru","*.stage.1tv.ru","dev.1tv.ru","*.dev.1tv.ru","local.1tv.ru:4000","*.local.1tv.ru:4000"],
+    controls: {
+        use: true,
+        mute: true,
+        errors: false
+    }
+}            }
+        </script>
+        
+<script>
+    let adConfigJson = {
+    "ad_positions": [
+        {
+            "type": "ad_position",
+            "position": "preroll",
+            "viewtime_sec": null,
+            "ads": [
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "p1": "bzhdx",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229103",
+                        "puid3": "187683",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "0",
+                        "puid6": "0",
+                        "puid9": "9",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                }
+            ],
+            "max_impressions": null
+        },
+        {
+            "type": "ad_position",
+            "position": "midroll",
+            "viewtime_sec": null,
+            "ads": [
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "bzipu",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229103",
+                        "puid3": "187678",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "0",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "bziqg",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229103",
+                        "puid3": "187679",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid20": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "bziqg",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229103",
+                        "puid3": "187679",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid20": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "bziqg",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229103",
+                        "puid3": "187679",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid20": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229103",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "1",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229103",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "2",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229103",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "3",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229103",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "4",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229103",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "5",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229103",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "6",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229103",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "7",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229103",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "8",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229103",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "9",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229103",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "10",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229103",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "11",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229103",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "adv",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229103",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "groupm",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229103",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "pd",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229103",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "pdpg",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                }
+            ],
+            "max_impressions": null
+        }
+    ]
+};
+    if (window.EUMP.device.is('mobile')) {
+        adConfigJson = {
+    "ad_positions": [
+        {
+            "type": "ad_position",
+            "position": "preroll",
+            "viewtime_sec": null,
+            "ads": [
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "p1": "bzhdx",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229104",
+                        "puid3": "187683",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "0",
+                        "puid6": "0",
+                        "puid9": "9",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                }
+            ],
+            "max_impressions": null
+        },
+        {
+            "type": "ad_position",
+            "position": "midroll",
+            "viewtime_sec": null,
+            "ads": [
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "bzipu",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229104",
+                        "puid3": "187678",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "0",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "bziqg",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229104",
+                        "puid3": "187679",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid20": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "bziqg",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229104",
+                        "puid3": "187679",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid20": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "bziqg",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229104",
+                        "puid3": "187679",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid20": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229104",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "1",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229104",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "2",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229104",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "3",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229104",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "4",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229104",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "5",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229104",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "6",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229104",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "7",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229104",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "8",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229104",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "9",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229104",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "10",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229104",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "11",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229104",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "adv",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229104",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "groupm",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229104",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "pd",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                },
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "264443",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "puid8": "",
+                        "p1": "canqy",
+                        "p2": "fuki",
+                        "puid1": "283",
+                        "puid2": "229104",
+                        "puid3": "187693",
+                        "puid4": "{{nmg_domain_code}}",
+                        "puid5": "{{contractor_project_id}}",
+                        "puid6": "{{contractor_season_id}}",
+                        "puid7": "{{contractor_category_id}}",
+                        "puid9": "9",
+                        "puid10": "1",
+                        "puid11": "187643",
+                        "puid12": "{{5tv_ext_or_int}}",
+                        "puid13": "186102",
+                        "puid16": "{{contractor_episode_id}}",
+                        "puid20": "pdpg",
+                        "puid15": "0",
+                        "puid21": "0",
+                        "puid19": "1",
+                        "puid22": "{{referer_domain}}",
+                        "puid23": "1tv_web",
+                        "extid_tag": "adfox",
+                        "extid": "{{uid}}"
+                    }
+                }
+            ],
+            "max_impressions": null
+        }
+    ]
+};
+    }
+</script>
+<script>
+    if (true) {
+        window.EUMPConfig.plugins.push('tvis');
+        window.EUMPConfig.pluginsOpts.tvis = {};
+    }
+</script>
+<script>
+    window.load_player_msec = Date.now();
+    let qualityDefinition = [
+        {name: 'LQ', rate: [0, 499]}, //350
+        {name: 'SD', rate: [500, 1999]}, //700
+        {name: 'HQ', rate: [2000, 4999]}, //3000
+        {name: 'HD', rate: [5000, 6999]}, //6000
+        {name: 'FHD', rate: [7000, 10000]}, //8000
+    ];
+
+    window.EUMP.i18nLang['ru']['Domain is not allowed'] = 'Размещение плеера на этом домене не разрешено<br/><br/><a href="https://www.5-tv.ru/live/" target="_blank">Смотрите прямой эфир на сайте 5-tv.ru</a>';
+    window.EUMP.i18nLang['ru']['Watch on site'] = '<a href="https://www.5-tv.ru/live/" target="_blank">Смотрите прямой эфир на сайте 5-tv.ru</a>';
+
+    initEUMPLivePlayer(
+        '#player',
+        {
+            start: 'visible',
+            api: {
+                sources: {
+                    url: 'https://media.mediavitrina.ru/api/v3/tv5/playlist/tv-5_as_array.json?application_id={{APPLICATION_ID}}&player_referer_hostname={{PLAYER_REFERER_HOSTNAME}}&config_checksum_sha256={{CONFIG_CHECKSUM_SHA256}}&egress_version_id=1428195',
+                    type: 'json'
+                },
+                sources_fallback: undefined,
+                adverts: {
+                    json: adConfigJson,
+                    type: 'plain_json'
+                },
+                drm: {
+                    mpdp: [
+                        {
+                            type: 'com.widevine.alpha', 
+                            serverURL: 'https://drm99502.nowdrm.co/widevine'
+                        },
+                        {
+                            type: 'com.microsoft.playready',
+                            serverURL: 'https://drm99502.nowdrm.co/playready/rightsmanager.asmx'
+                        },
+                    ],
+                    hlsp: [
+                        {
+                            type: "com.apple.fps.1_0",
+                            licenseURL: 'https://drm99502.nowdrm.co/fairplay',
+                            certificateURL: 'https://staticmv.mediavitrina.ru/fairplay/1tv.der'
+                        },
+                    ]
+                }
+            },
+            protectionKey: 'disabled',
+            intervals: {
+                protectionKey: 0
+            },
+            allowedCountries: ["RU"],
+            allowedDomains: ["mediavitrina.ru","*.mediavitrina.ru","1tv.ru","*.1tv.ru","cm.1tv.ru","*.cm.1tv.ru","stage.1tv.ru","*.stage.1tv.ru","dev.1tv.ru","*.dev.1tv.ru","local.1tv.ru:4000","*.local.1tv.ru:4000"],
+            srcOrder: ['mpdp', 'hlsp', 'mpd', 'hls'],
+            srcTypes: {
+                mpdp: {
+                    type: 'application/mpd+mp4',
+                    live: true
+                },
+                /*
+                m3u8p: {
+                    type: 'application/x-mpegURL',
+                    live: true
+                },
+                */
+                hlsp: {
+                    type: 'application/x-mpegURL',
+                    live: true
+                },
+                mpd: {
+                    type: 'application/mpd+mp4',
+                    live: true
+                },
+                hls: {
+                    type: 'application/x-mpegURL',
+                    live: true
+                }
+            },
+            playerOpts: {
+                initDelay: 0,
+                assetsURL: window.EUMPConfig.assetsURL,
+                lang: 'ru',
+                liveTimeOffset: -10800,
+                engines: ['html5shaka', 'html5p', 'html5hlsjs', 'html5', 'yandex_video_ads_sdk'],
+                enginesOpts: {
+                    html5hlsjs: {
+                        sourceCycles: 2,
+                        qualityDefinition: qualityDefinition,
+                        enabledOnMobile: true,
+                        enabledOnIOS: false,
+                        hlsPlayerOpts: {
+                            liveSyncDurationCount: 4,
+                            liveMaxLatencyDurationCount: 8
+                        },
+                        captions: {enabled: true},
+                        autoLevels: false,
+                        playsinline: true,
+                        nextLiveSourceOnEnded: true,
+                        enableSeekLiveOnMobile: true,
+                        liveTimeShift: 0,
+                    },
+                    html5shaka: {
+                        sourceCycles: 2,
+                        dashClockSyncUri: 'https://media.mediavitrina.ru/current_unixtime',
+                        bufferingMonitor: {
+                            counterThreshold: 10
+                        },
+                        captions: {enabled: true},
+                        qualityDefinition: qualityDefinition,
+                        autoLevels: false,
+                        enabledOnMobile: true,
+                        playsinline: true,
+                        errorCounterLimit: 2,
+                        shakaPlayerOpts: {
+                            abr: {
+                                defaultBandwidthEstimate: 500000,
+                                switchInterval: 5
+                            },
+                            streaming: {
+                                bufferingGoal: 60,
+                                bufferBehind: 40,
+                                retryParameters: {maxAttempts: 2, timeout: 5500},
+                                startAtSegmentBoundary: false,
+                                ignoreTextStreamFailures: true,
+                                jumpLargeGaps: true,
+                                safeSeekOffset: 10
+                            },
+                            manifest: {
+                                retryParameters: {maxAttempts: 2, timeout: 7500}
+                            },
+                            drm: {
+                                retryParameters: {maxAttempts: 2, timeout: 5000}
+                            }
+                        },
+                        liveTimeShift: 0,
+                    },
+                    html5: {
+                        sourceCycles: 2,
+                        captions: {enabled: true},
+                        useAndroidHLSFix: true,
+                        playsinline: true,
+                        liveTimeShift: 0,
+                    },
+                    html5p: {
+                        playsinline: true,
+                        liveTimeShift: 0,
+                        captions: {enabled: true},
+                        licenseParamsHandler: function (message, session, engine) {
+                            return JSON.stringify({content_id: 'skd://c97ef120-b64e-4d95-9a9f-acfe2318b475', spc_message: engine.base64EncodeUint8Array(message)});
+                        }
+                    }
+                },
+                plugins: window.EUMPConfig.plugins,
+                pluginsOpts: window.EUMP.fw.extend(
+                    window.EUMPConfig.pluginsOpts,
+                    {
+                        ecto_live: {
+                            defaultTitle: 'Пятый канал. Прямой эфир',
+                            comBlockStartEnabled: false
+                        },
+                        vitrina_stat: {
+                            enabled: true,
+                            db: 'channel5',
+                            epg_id: 17,
+                            player_id: 13149,
+                            vitrina_id: 941,
+                            url: 'https://stat-analytics.mediavitrina.ru/',
+                            user_storage_ident: 'vitrina_uid',
+                            debug_mode: false,
+                            player: 'web',
+                        },
+                        tns_counter: {
+                            enabled: true,
+                            url: '//www.tns-counter.ru/V13a**catid:10:vcid:259:vcver:0:fts:[FTS]:vts:[VTS]:evtp:[EventType]:dvtp:[DeviceType]**5chanel_tv/ru/UTF-8/tmsec=5chanel_5chanel-hb30-1tv/'
+                        },
+                        tracking: {
+                            events_v2: {
+                                'ad_request_no_wrapper': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://www.tns-counter.ru/V13a****everest_ru/ru/UTF-8/tmsec=everest_network/{{INSTANT_RAND_U32INT}}'
+                                    }
+                                ],
+                                'first_play_or_ad': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://tns-counter.ru/e/ec01&cid=vitrina_tv&typ=1&tms=1tv&idc=107&idlc={{VITRINATV_PROGRAMME_ID}}&ver=0&media=ПЯТЫЙ КАНАЛ&type={{MEDIASCOPE2021_TYPE}}&fts={{STREAM_TS_MSEC}}&view=1'
+                                    }
+                                ],
+                                'pause_start': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://tns-counter.ru/e/ec01&cid=vitrina_tv&typ=1&tms=1tv&idc=107&idlc={{VITRINATV_PROGRAMME_ID}}&ver=0&media=ПЯТЫЙ КАНАЛ&type={{MEDIASCOPE2021_TYPE}}&fts={{STREAM_TS_MSEC}}&view=3'
+                                    }
+                                ],
+                                'pause_end': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://tns-counter.ru/e/ec01&cid=vitrina_tv&typ=1&tms=1tv&idc=107&idlc={{VITRINATV_PROGRAMME_ID}}&ver=0&media=ПЯТЫЙ КАНАЛ&type={{MEDIASCOPE2021_TYPE}}&fts={{STREAM_TS_MSEC}}&view=1'
+                                    }
+                                ],
+                                'mediascope2021_heartbeat': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://tns-counter.ru/e/ec01&cid=vitrina_tv&typ=1&tms=1tv&idc=107&idlc={{VITRINATV_PROGRAMME_ID}}&ver=0&media=ПЯТЫЙ КАНАЛ&type={{MEDIASCOPE2021_TYPE}}&fts={{MEDIASCOPE2021_STREAM_TS_MSEC}}&view=2'
+                                    }
+                                ],
+                                'tvis_request_no_wrapper': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://stat-analytics.mediavitrina.ru/?event=tvis_request_no_wrapper&player_id=13149&vitrina_id=941&player=web&epg_id=17&db=channel5&version={{PLAYER_VERSION}}&sid={{SID}}&uid={{UID}}&location={{LOCATION}}&domain={{DOMAIN}}&mode={{MODE}}&event_ts={{EVENT_TS}}&client_timezone_offset={{CLIENT_TIME_ZONE_OFFSET}}&device={{DEVICE_TYPE}}&device_vendor={{DEVICE_VENDOR}}&device_model={{DEVICE_MODEL}}&user_browser={{USER_BROWSER}}&user_browser_ver={{USER_BROWSER_VER}}&user_browser_ver_major={{USER_BROWSER_VER_MAJOR}}&user_browser_ver_minor={{USER_BROWSER_VER_MINOR}}&user_os={{USER_OS_NAME}}&user_os_ver_major={{USER_OS_VER_MAJOR}}&user_os_ver_minor={{USER_OS_VER_MINOR}}&vitrinatv_programme_id={{VITRINATV_PROGRAMME_ID}}'
+                                    }
+                                ],
+                                'tvis_creative_start': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://stat-analytics.mediavitrina.ru/?event=tvis_creative_start&player_id=13149&vitrina_id=941&player=web&epg_id=17&db=channel5&version={{PLAYER_VERSION}}&sid={{SID}}&uid={{UID}}&location={{LOCATION}}&domain={{DOMAIN}}&mode={{MODE}}&event_ts={{EVENT_TS}}&client_timezone_offset={{CLIENT_TIME_ZONE_OFFSET}}&device={{DEVICE_TYPE}}&device_vendor={{DEVICE_VENDOR}}&device_model={{DEVICE_MODEL}}&user_browser={{USER_BROWSER}}&user_browser_ver={{USER_BROWSER_VER}}&user_browser_ver_major={{USER_BROWSER_VER_MAJOR}}&user_browser_ver_minor={{USER_BROWSER_VER_MINOR}}&user_os={{USER_OS_NAME}}&user_os_ver_major={{USER_OS_VER_MAJOR}}&user_os_ver_minor={{USER_OS_VER_MINOR}}&vitrinatv_programme_id={{VITRINATV_PROGRAMME_ID}}'
+                                    }
+                                ],
+                                'tvis_creative_end': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://stat-analytics.mediavitrina.ru/?event=tvis_creative_end&player_id=13149&vitrina_id=941&player=web&epg_id=17&db=channel5&version={{PLAYER_VERSION}}&sid={{SID}}&uid={{UID}}&location={{LOCATION}}&domain={{DOMAIN}}&mode={{MODE}}&event_ts={{EVENT_TS}}&client_timezone_offset={{CLIENT_TIME_ZONE_OFFSET}}&device={{DEVICE_TYPE}}&device_vendor={{DEVICE_VENDOR}}&device_model={{DEVICE_MODEL}}&user_browser={{USER_BROWSER}}&user_browser_ver={{USER_BROWSER_VER}}&user_browser_ver_major={{USER_BROWSER_VER_MAJOR}}&user_browser_ver_minor={{USER_BROWSER_VER_MINOR}}&user_os={{USER_OS_NAME}}&user_os_ver_major={{USER_OS_VER_MAJOR}}&user_os_ver_minor={{USER_OS_VER_MINOR}}&vitrinatv_programme_id={{VITRINATV_PROGRAMME_ID}}'
+                                    }
+                                ],
+                                'tvis_creative_expanded': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://stat-analytics.mediavitrina.ru/?event=tvis_creative_expanded&player_id=13149&vitrina_id=941&player=web&epg_id=17&db=channel5&version={{PLAYER_VERSION}}&sid={{SID}}&uid={{UID}}&location={{LOCATION}}&domain={{DOMAIN}}&mode={{MODE}}&event_ts={{EVENT_TS}}&client_timezone_offset={{CLIENT_TIME_ZONE_OFFSET}}&device={{DEVICE_TYPE}}&device_vendor={{DEVICE_VENDOR}}&device_model={{DEVICE_MODEL}}&user_browser={{USER_BROWSER}}&user_browser_ver={{USER_BROWSER_VER}}&user_browser_ver_major={{USER_BROWSER_VER_MAJOR}}&user_browser_ver_minor={{USER_BROWSER_VER_MINOR}}&user_os={{USER_OS_NAME}}&user_os_ver_major={{USER_OS_VER_MAJOR}}&user_os_ver_minor={{USER_OS_VER_MINOR}}&vitrinatv_programme_id={{VITRINATV_PROGRAMME_ID}}'
+                                    }
+                                ],
+                                'tvis_error': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://stat-analytics.mediavitrina.ru/?event=tvis_error&player_id=13149&vitrina_id=941&player=web&epg_id=17&db=channel5&version={{PLAYER_VERSION}}&sid={{SID}}&uid={{UID}}&location={{LOCATION}}&domain={{DOMAIN}}&mode={{MODE}}&event_ts={{EVENT_TS}}&client_timezone_offset={{CLIENT_TIME_ZONE_OFFSET}}&device={{DEVICE_TYPE}}&device_vendor={{DEVICE_VENDOR}}&device_model={{DEVICE_MODEL}}&user_browser={{USER_BROWSER}}&user_browser_ver={{USER_BROWSER_VER}}&user_browser_ver_major={{USER_BROWSER_VER_MAJOR}}&user_browser_ver_minor={{USER_BROWSER_VER_MINOR}}&user_os={{USER_OS_NAME}}&user_os_ver_major={{USER_OS_VER_MAJOR}}&user_os_ver_minor={{USER_OS_VER_MINOR}}&vitrinatv_programme_id={{VITRINATV_PROGRAMME_ID}}'
+                                    }
+                                ],
+                                'apierror': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://stat-analytics.mediavitrina.ru/?event=apierror&player_id=13149&vitrina_id=941&player=web&epg_id=17&db=channel5&version={{PLAYER_VERSION}}&sid={{SID}}&uid={{UID}}&location={{LOCATION}}&domain={{DOMAIN}}&mode={{MODE}}&event_ts={{EVENT_TS}}&client_timezone_offset={{CLIENT_TIME_ZONE_OFFSET}}&device={{DEVICE_TYPE}}&device_vendor={{DEVICE_VENDOR}}&device_model={{DEVICE_MODEL}}&user_browser={{USER_BROWSER}}&user_browser_ver={{USER_BROWSER_VER}}&user_browser_ver_major={{USER_BROWSER_VER_MAJOR}}&user_browser_ver_minor={{USER_BROWSER_VER_MINOR}}&user_os={{USER_OS_NAME}}&user_os_ver_major={{USER_OS_VER_MAJOR}}&user_os_ver_minor={{USER_OS_VER_MINOR}}&error_title={{ERROR_TITLE}}&error_adv={{ERROR_ADV}}&error_id={{ERROR_ID}}&vitrinatv_programme_id={{VITRINATV_PROGRAMME_ID}}'
+                                    }
+                                ],
+                            },
+                        },
+                        com: {
+                            useYandexSdkPlaceholders: true,
+                            intervals: {all: 20},
+                            preloadOnQuartile: 3,
+                        },
+                        epg: {
+                            epg_url: 'https://static-api.mediavitrina.ru/v1/epg/5tv/lite_web.json'
+                        },
+                        epg_ui: {
+                            titleTemplate: '{{title}}',
+                        },
+                        restrictions: {
+                            restrictions_url: 'https://static-api.mediavitrina.ru/v1/epg/5tv/restrictions.json',
+                            poster: 'https://staticmv.mediavitrina.ru/vitrina_assets/netprav/nmg_tv-5_16x9_v2/nmg_5-tv_16x9_v2_360.jpg',
+                        },
+                        quality: {
+                            labels: {'FHD': 'Full HD', 'HD': 'HD', 'HQ': 'High', 'SD': 'Middle', 'LQ': 'Low'},
+                            stickers: {'FHD': 'HD'},
+                            qualityOrder: ['FHD', 'HD', 'HQ', 'SD', 'LQ']
+                        },
+                        sergeant: {
+                            preventAutoStartItem: true,
+                            ignoreOn: {mobile: true},
+                            labels: {
+                                warning: '<p>Уважаемый зритель!</p><p>Похоже, у вас установлено программное обеспечение, которое блокирует показ <nobr>видео-рекламы.</nobr></p><p>При блокировании показа рекламы плеер может работать с ошибками.</p><p>Отключив блокировку рекламы, вы получите возможность смотреть видео в <nobr>высоком качестве!</nobr></p>'
+                            }
+                        },
+                        contextmenu: {
+                            enabled: true
+                        },
+                        cast_sender: {
+                            reciever_namespace:'urn:x-cast:tv.vitrina.caf',
+                            reciever_application_id: '2441E3B4',
+                            receiver_config_url: ''
+                        },
+                        com_schedule_loader: {
+                            adscheduleUrl: 'https://static-api.mediavitrina.ru/v1/epg/5tv/ad-injections.json',
+                            adscheduleIntervalSec: 5
+                        },
+                        com_scheduler: {
+                            seekToLiveAfterMidrolls: true
+                        }
+                    }
+                ),
+            },
+        }
+    )
+</script>
+<!--LiveInternet counter-->
+<script type="text/javascript">
+    new Image().src = "//counter.yadro.ru/hit;mic_izvestia?r" + encodeURIComponent(document.referrer) +
+        ((typeof (screen) == "undefined") ? "" : ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ? screen.colorDepth : screen.pixelDepth)) +
+        ";u" + encodeURIComponent(document.URL) +
+        ";h" + encodeURIComponent(document.title.substring(0, 150)) +
+        ";" + Math.random();
+</script>
+<!--/LiveInternet-->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    if (typeof isOfficialSite5tvChannel == 'undefined' || !isOfficialSite5tvChannel) {
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter44834683 = new Ya.Metrika({
+                        id:24254335,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true,
+                        webvisor:true
+                    });
+                } catch(e) { }
+            });
+    
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+    
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    }
+</script>
+<!-- /Yandex.Metrika counter -->
+
+</body>
+</html>

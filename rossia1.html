@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Прямой эфир</title>
+    <link rel=stylesheet href="//staticmv.mediavitrina.ru/dist/eump-core/v18.10.10/eump.min.css" type="text/css"/>
+    <link rel=stylesheet href="//staticmv.mediavitrina.ru/dist/eump-vitrina/v2.6.2/eump-vitrina.min.css" type="text/css"/>
+    <link rel="stylesheet" href="//staticmv.mediavitrina.ru/vitrina_assets/v1.0.3/vitrina_preloader_logo.css" type="text/css"/>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #000000
+        }
+
+        .eump-player {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0
+        }
+    </style>
+</head>
+<body>
+<script>
+    window.EUMPAssetsURL = "//staticmv.mediavitrina.ru/dist/eump-core/v18.10.10/";
+    
+    window.EUMPConfig = {
+        assetsURL: window.EUMPAssetsURL,
+        plugins: [],
+        pluginsOpts: {}
+    };
+</script>
+<div class="eump-player eump-ratio-16x9" id="player"></div>
+<script src="//staticmv.mediavitrina.ru/dist/eump-core/v18.10.10/eump.all.min.js"></script>
+<script src="//staticmv.mediavitrina.ru/dist/eump-vitrina/v2.6.2/eump-vitrina.min.js"></script>
+
+
+
+
+
+        <script>
+        if (window.EUMPConfig && window.EUMPConfig.plugins) {
+            window.EUMPConfig.plugins.push('teleport');
+        }
+        </script>
+                <script>
+            if (window.EUMPConfig && window.EUMPConfig.pluginsOpts) {
+                window.EUMPConfig.pluginsOpts.teleport = {
+    "apiKey": "6a6b1b22ae31fb52",
+    "dashApiKey": "6a6b1b22ae31fb52",
+    "hlsApiKey": "42036852bb7fd522"
+}            }
+        </script>
+                <script>
+        if (window.EUMPConfig && window.EUMPConfig.plugins) {
+            window.EUMPConfig.plugins.push('remote');
+        }
+        </script>
+                <script>
+            if (window.EUMPConfig && window.EUMPConfig.pluginsOpts) {
+                window.EUMPConfig.pluginsOpts.remote = {
+    ignorePID: true,
+    allowDomains: ["mediavitrina.ru","*.mediavitrina.ru","1tv.ru","*.1tv.ru","cm.1tv.ru","*.cm.1tv.ru","stage.1tv.ru","*.stage.1tv.ru","dev.1tv.ru","*.dev.1tv.ru","local.1tv.ru:4000","*.local.1tv.ru:4000"],
+    controls: {
+        use: true,
+        mute: true,
+        errors: false
+    }
+}            }
+        </script>
+        
+<script type="text/javascript" >
+ (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+ (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ ym(24831155, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+        });
+ </script>
+<noscript>
+    <div><img src="//mc.yandex.ru/watch/24831155?ut=noindex" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript>
+<script>
+    ((counterHostname) => {
+        window.MSCounter = {
+            counterHostname: counterHostname
+        };
+        window.mscounterCallbacks = window.mscounterCallbacks || [];
+        window.mscounterCallbacks.push(() => {
+            msCounterExampleCom = new MSCounter.counter({
+                    'account':'vitrina_tv',
+                    'tmsec': 'vitrina_play',
+                    'autohit' : true
+                });
+        });
+        const newScript = document.createElement('script');
+        newScript.async = true;
+        newScript.src = counterHostname + '/ncc/counter.js';
+        const referenceNode = document.querySelector('script');
+        if (referenceNode) {
+            referenceNode.parentNode.insertBefore(newScript, referenceNode);
+        } else {
+            document.firstElementChild.appendChild(newScript);
+        }
+    })('https://tns-counter.ru/');
+</script>
+<script>
+    let adConfigJson = {
+    "ad_positions": [
+        {
+            "type": "ad_position",
+            "position": "preroll",
+            "viewtime_sec": null,
+            "ads": [
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "166267",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "p1": "cihip",
+                        "p2": "flgb",
+                        "puid1": "1",
+                        "puid2": "",
+                        "puid3": "html",
+                        "puid4": "{{referer_domain}}",
+                        "puid20": "999999999",
+                        "eid1": "{{vgtrk_eid1}}",
+                        "extid": "{{uid}}",
+                        "pr": "{{vgtrk_pr}}",
+                        "random": "{{random}}",
+                        "dl": "{{vgtrk_dl}}",
+                        "eid2": "{{referer_location}}"
+                    }
+                }
+            ],
+            "max_impressions": null
+        },
+        {
+            "type": "ad_position",
+            "position": "midroll",
+            "viewtime_sec": null,
+            "ads": [
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "364326",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "p1": "cmqyy",
+                        "p2": "gzac",
+                        "puid1": "1tv_web",
+                        "puid3": "{{UID}}",
+                        "puid4": "{{contractor_category_id}}",
+                        "puid5": "{{af_lpdid}}",
+                        "puid6": "{{referer_domain}}",
+                        "eid1": "{{eid1}}"
+                    }
+                }
+            ],
+            "max_impressions": null
+        }
+    ]
+};
+    if (window.EUMP.device.is('mobile')) {
+        adConfigJson = {
+    "ad_positions": [
+        {
+            "type": "ad_position",
+            "position": "preroll",
+            "viewtime_sec": null,
+            "ads": [
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "166267",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "p1": "cihip",
+                        "p2": "flgb",
+                        "puid1": "1",
+                        "puid2": "",
+                        "puid3": "html",
+                        "puid4": "{{referer_domain}}",
+                        "puid20": "999999999",
+                        "eid1": "{{vgtrk_eid1}}",
+                        "extid": "{{uid}}",
+                        "pr": "{{vgtrk_pr}}",
+                        "random": "{{random}}",
+                        "dl": "{{vgtrk_dl}}",
+                        "eid2": "{{referer_location}}"
+                    }
+                }
+            ],
+            "max_impressions": null
+        },
+        {
+            "type": "ad_position",
+            "position": "midroll",
+            "viewtime_sec": null,
+            "ads": [
+                {
+                    "ads_engine": "yandex_sdk_adfox_creative",
+                    "ads_server_url": null,
+                    "yandex_ads_network_category": null,
+                    "yandex_ads_owner_id": "364326",
+                    "yandex_ads_partner_id": null,
+                    "yandex_ads_network_params": {
+                        "p1": "cmqzf",
+                        "p2": "gzac",
+                        "puid1": "1tv_web",
+                        "puid3": "{{UID}}",
+                        "puid4": "{{contractor_category_id}}",
+                        "puid5": "{{af_lpdid}}",
+                        "puid6": "{{referer_domain}}",
+                        "eid1": "{{eid1}}"
+                    }
+                }
+            ],
+            "max_impressions": null
+        }
+    ]
+};
+    }
+</script>
+<script>
+    if (true) {
+        window.EUMPConfig.plugins.push('tvis');
+        window.EUMPConfig.pluginsOpts.tvis = {};
+    }
+</script>
+<script>
+    window.load_player_msec = Date.now();
+    window.EUMP.i18nLang['ru']['Domain is not allowed'] = 'Размещение плеера на этом домене не разрешено<br/><br/><a href="https://russia.tv/" target="_blank">Смотрите прямой эфир на сайте russia.tv</a>';
+    window.EUMP.i18nLang['ru']['Watch on site'] = '<a href="https://russia.tv/" target="_blank">Смотрите прямой эфир на сайте russia.tv</a>';
+
+    let qualityDefinition = [
+        {name: 'LQ', rate: [0, 699]},
+        {name: 'SD', rate: [700, 1999]},
+        {name: 'HQ', rate: [2000, 3499]},
+        {name: 'HD', rate: [3500, 5999]},
+        {name: 'FHD', rate: [6000, 10000]},
+    ];
+</script>
+<script>
+    var live_id, sid, tmsecStarted, tmsecInit;
+    switch ('russia1') {
+        case 'russia1':
+            live_id = '2961';
+            sid = 'rutv';
+            tmsecStarted = 'rutv_playerstart';
+            tmsecInit = 'rutv_playerload';
+            break;
+        case 'russia24':
+            live_id = '21';
+            sid = 'r24';
+            tmsecStarted = 'vesti_videostart';
+            tmsecInit = 'vesti_videoload';
+            break;
+        case 'kultura':
+            live_id = '19201';
+            sid = 'kultura';
+            tmsecStarted = 'russiak_playerstart';
+            tmsecInit = 'russiak_playerload';
+            break;
+            
+    }
+</script>
+<script>
+    let orbits = [];
+</script>
+<script>
+    let srcOrder = ['mpdp', 'hlsp', 'mpd', 'hls'];
+    let srcFromQuery = window.EUMP.fw.queryParam('src');
+    if (srcFromQuery) {
+        srcOrder = [srcFromQuery];
+    }
+    
+    initOrbitsEUMPLivePlayer(orbits, '//media.mediavitrina.ru/timezone', '#player',
+        {
+            srcOrder: srcOrder,
+            srcTypes: {
+                mpdp: {
+                    type: 'application/mpd+mp4',
+                    live: true
+                },
+                hlsp: {
+                    type: 'application/x-mpegURL',
+                    live: true
+                },
+                mpd: {
+                    type: 'application/mpd+mp4',
+                    live: true
+                },
+                hls: {
+                    type: 'application/x-mpegURL',
+                    live: true
+                }
+            },
+            start: 'visible',
+            api: {
+                sources: {
+                    url: 'https://media.mediavitrina.ru/api/v3/vgtrk/playlist/russia1_as_array.json?application_id={{APPLICATION_ID}}&player_referer_hostname={{PLAYER_REFERER_HOSTNAME}}&config_checksum_sha256={{CONFIG_CHECKSUM_SHA256}}&egress_version_id=1431759',
+                    type: 'json'
+                },
+                sources_fallback: undefined,
+                adverts: {
+                    json: adConfigJson,
+                    type: 'plain_json'
+                },
+                drm: {
+                    mpdp: [
+                        {   
+                            type: 'com.widevine.alpha', 
+                            serverURL: 'https://drm99502.nowdrm.co/widevine'
+                        },
+                        {
+                            type: 'com.microsoft.playready',
+                            serverURL: 'https://drm99502.nowdrm.co/playready/rightsmanager.asmx'
+                        }
+                    ],
+                    hlsp: [
+                        {
+                            type: "com.apple.fps.1_0",
+                            licenseURL: 'https://drm99502.nowdrm.co/fairplay',
+                            certificateURL: 'https://staticmv.mediavitrina.ru/fairplay/1tv.der'
+                        }
+                    ]
+                },
+            },
+            protectionKey: 'disabled',
+            intervals: {
+                protectionKey: 0
+            },
+            tnsWebIndexInternalDomains: ['*'],
+            tnsWebIndexPixels: {
+                internal: {
+                    started: 'https://www.tns-counter.ru/V13a****vgtrk_ru/ru/UTF-8/tmsec=' + tmsecStarted,
+                    init: 'https://www.tns-counter.ru/V13a****vgtrk_ru/ru/UTF-8/tmsec=' + tmsecInit,
+                }
+            },
+            poster: '',
+            geoRestrictionsPoster: 'https://staticmv.mediavitrina.ru/vitrina_assets/georestrictions/vgtrk_russia1_16x9_v1/vgtrk_russia1_16x9_v1.png',
+            blackoutPosterUrl: 'https://staticmv.mediavitrina.ru/vitrina_assets/netprav/vgtrk_russia1_16x9_v1/vgtrk_russia1_16x9_v1.png',
+            allowedCountries: ["RU"],
+            disallowedCountries: [],
+            allowedDomains: ["mediavitrina.ru","*.mediavitrina.ru","1tv.ru","*.1tv.ru","cm.1tv.ru","*.cm.1tv.ru","stage.1tv.ru","*.stage.1tv.ru","dev.1tv.ru","*.dev.1tv.ru","local.1tv.ru:4000","*.local.1tv.ru:4000"],
+            playerOpts: {
+                muted: function () {
+                    let muted = false;
+                    if (window.EUMP.fw.queryParam('muted')) {
+                        muted = true;
+                    }
+
+                    let osName = window.EUMP.device.param('os.name') || '';
+                    if (osName.toLowerCase() === 'ios') {
+                        muted = true;
+                    }
+
+                    let browserName = window.EUMP.device.param('browser.name') || '';
+                    if (browserName.toLowerCase().includes('safari')) {
+                        muted = true;
+                    }
+
+                    return muted;
+                }(),
+                assetsURL: window.EUMPAssetsURL,
+                lang: 'ru',
+                useDeprecatedScheduleApi: false,
+                liveTimeOffset: -10800,
+                engines: ['html5shaka', 'html5p', 'html5hlsjs', 'html5', 'yandex_video_ads_sdk'],
+                enginesOpts: {
+                    'html5hlsjs': {
+                        sourceCycles: 2,
+                        qualityDefinition: qualityDefinition,
+                        enabledOnMobile: true,
+                        enabledOnIOS: false,
+                        hlsPlayerOpts: {
+                            liveSyncDurationCount: 4,
+                            liveMaxLatencyDurationCount: 8
+                        },
+                        captions: {
+                            enabled: true,
+                            translateTracks: [
+                                {
+                                    language: 'rus',
+                                    setTrack: 'ru'
+                                },
+                                {
+                                    language: 't1',
+                                    setTrack: 'ru'
+                                }
+                            ]
+                        },
+                        autoLevels: false,
+                        playsinline: true,
+                        nextLiveSourceOnEnded: true,
+                        enableSeekLiveOnMobile: true,
+                        liveTimeShift: 0,
+                    },
+                    'html5shaka': {
+                        sourceCycles: 2,
+                        dashClockSyncUri: 'https://media.mediavitrina.ru/current_unixtime',
+                        bufferingMonitor: {
+                            counterThreshold: 10
+                        },
+                        captions: {
+                            enabled: true,
+                            translateTracks: [
+                                {
+                                    label: 'Shaka Player TextTrack',
+                                    setTrack: 'ru',
+                                    setLabel: 'Russian'
+                                },
+                                {
+                                    label: 't1',
+                                    setTrack: 'ru',
+                                    setLabel: 'Russian'
+                                }
+                            ]
+                        },
+                        qualityDefinition: qualityDefinition,
+                        autoLevels: false,
+                        enabledOnMobile: true,
+                        playsinline: true,
+                        errorCounterLimit: 2,
+                        shakaPlayerOpts: {
+                            abr: {
+                                defaultBandwidthEstimate: 350000,
+                                switchInterval: 6,
+                                bandwidthDowngradeTarget: 1, // default: 0.95
+                                bandwidthUpgradeTarget: 0.8, // default: 0.85
+                            },
+                            streaming: {
+                                bufferingGoal: 60,
+                                bufferBehind: 40,
+                                retryParameters: {maxAttempts: 2, baseDelay: 500, backoffFactor: 2, fuzzFactor: 0.5, timeout: 5500},
+                                startAtSegmentBoundary: false,
+                                ignoreTextStreamFailures: true,
+                                jumpLargeGaps: true,
+                                safeSeekOffset: 30
+                            },
+                            manifest: {
+                                retryParameters: {maxAttempts: 2, timeout: 7500},
+                                dash: {
+                                    autoCorrectDrift: false
+                                }
+                            },
+                            drm: {
+                                retryParameters: {maxAttempts: 2, timeout: 5000}
+                            }
+                        },
+                        liveTimeShift: 0,
+                    },
+                    'html5': {
+                        sourceCycles: 2,
+                        captions: {
+                            enabled: true,
+                            translateTracks: [
+                                {
+                                    language: 'rus',
+                                    setTrack: 'ru'
+                                },
+                                {
+                                    language: 't1',
+                                    setTrack: 'ru'
+                                },
+                                {
+                                    label: 't1',
+                                    setTrack: 'ru',
+                                    setLabel: 'Russian'
+                                }
+                            ]
+                        },
+                        useAndroidHLSFix: true,
+                        playsinline: true,
+                        liveTimeShift: 0,
+                    },
+                    html5p: {
+                        liveTimeShift: 0,
+                        playsinline: true,
+                        captions: {enabled: true},
+                        licenseParamsHandler: function (message, session, engine) {
+                            return JSON.stringify({content_id: 'skd://6901648b-83b1-45a1-85b6-8ef56445c8c1', spc_message: engine.base64EncodeUint8Array(message)});
+                        }
+                    }
+                },
+                plugins: [
+                    'ecto_live', 'epg',  'epg_ui', 'quality',
+                    'com', 'com_scheduler', 'com_schedule_loader',
+                    'sergeant', 'restrictions', 'vitrina_stat', 'tns_counter', 
+                    'buffering_watchdog', 'yandexmetrika', 'error_reporting',
+                    'tracking'
+                ].concat(window.EUMPConfig.plugins),
+                pluginsOpts: window.EUMP.fw.extend(
+                    window.EUMPConfig.pluginsOpts,
+                    {
+                        tracking: {
+                            events_v2: {
+                                'ad_request_no_wrapper': [
+                                    {
+                                        http_method: 'GET',
+                                        url: ''
+                                    }
+                                ],
+                                'first_play_or_ad': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://tns-counter.ru/e/ec01&cid=vitrina_tv&typ=1&tms=1tv&idc=107&idlc={{VITRINATV_PROGRAMME_ID}}&ver=0&media=РОССИЯ 1&type={{MEDIASCOPE2021_TYPE}}&fts={{STREAM_TS_MSEC}}&view=1'
+                                    }
+                                ],
+                                'pause_start': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://tns-counter.ru/e/ec01&cid=vitrina_tv&typ=1&tms=1tv&idc=107&idlc={{VITRINATV_PROGRAMME_ID}}&ver=0&media=РОССИЯ 1&type={{MEDIASCOPE2021_TYPE}}&fts={{STREAM_TS_MSEC}}&view=3'
+                                    }
+                                ],
+                                'pause_end': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://tns-counter.ru/e/ec01&cid=vitrina_tv&typ=1&tms=1tv&idc=107&idlc={{VITRINATV_PROGRAMME_ID}}&ver=0&media=РОССИЯ 1&type={{MEDIASCOPE2021_TYPE}}&fts={{STREAM_TS_MSEC}}&view=1'
+                                    }
+                                ],
+                                'mediascope2021_heartbeat': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://tns-counter.ru/e/ec01&cid=vitrina_tv&typ=1&tms=1tv&idc=107&idlc={{VITRINATV_PROGRAMME_ID}}&ver=0&media=РОССИЯ 1&type={{MEDIASCOPE2021_TYPE}}&fts={{MEDIASCOPE2021_STREAM_TS_MSEC}}&view=2'
+                                    }
+                                ],
+                                'tvis_request_no_wrapper': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://stat-analytics.mediavitrina.ru/?event=tvis_request_no_wrapper&player_id=13153&vitrina_id=941&player=web&epg_id=7&db=vgtrk_russia_1&version={{PLAYER_VERSION}}&sid={{SID}}&uid={{UID}}&location={{LOCATION}}&domain={{DOMAIN}}&mode={{MODE}}&event_ts={{EVENT_TS}}&client_timezone_offset={{CLIENT_TIME_ZONE_OFFSET}}&device={{DEVICE_TYPE}}&device_vendor={{DEVICE_VENDOR}}&device_model={{DEVICE_MODEL}}&user_browser={{USER_BROWSER}}&user_browser_ver={{USER_BROWSER_VER}}&user_browser_ver_major={{USER_BROWSER_VER_MAJOR}}&user_browser_ver_minor={{USER_BROWSER_VER_MINOR}}&user_os={{USER_OS_NAME}}&user_os_ver_major={{USER_OS_VER_MAJOR}}&user_os_ver_minor={{USER_OS_VER_MINOR}}&vitrinatv_programme_id={{VITRINATV_PROGRAMME_ID}}'
+                                    }
+                                ],
+                                'tvis_creative_start': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://stat-analytics.mediavitrina.ru/?event=tvis_creative_start&player_id=13153&vitrina_id=941&player=web&epg_id=7&db=vgtrk_russia_1&version={{PLAYER_VERSION}}&sid={{SID}}&uid={{UID}}&location={{LOCATION}}&domain={{DOMAIN}}&mode={{MODE}}&event_ts={{EVENT_TS}}&client_timezone_offset={{CLIENT_TIME_ZONE_OFFSET}}&device={{DEVICE_TYPE}}&device_vendor={{DEVICE_VENDOR}}&device_model={{DEVICE_MODEL}}&user_browser={{USER_BROWSER}}&user_browser_ver={{USER_BROWSER_VER}}&user_browser_ver_major={{USER_BROWSER_VER_MAJOR}}&user_browser_ver_minor={{USER_BROWSER_VER_MINOR}}&user_os={{USER_OS_NAME}}&user_os_ver_major={{USER_OS_VER_MAJOR}}&user_os_ver_minor={{USER_OS_VER_MINOR}}&vitrinatv_programme_id={{VITRINATV_PROGRAMME_ID}}'
+                                    }
+                                ],
+                                'tvis_creative_end': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://stat-analytics.mediavitrina.ru/?event=tvis_creative_end&player_id=13153&vitrina_id=941&player=web&epg_id=7&db=vgtrk_russia_1&version={{PLAYER_VERSION}}&sid={{SID}}&uid={{UID}}&location={{LOCATION}}&domain={{DOMAIN}}&mode={{MODE}}&event_ts={{EVENT_TS}}&client_timezone_offset={{CLIENT_TIME_ZONE_OFFSET}}&device={{DEVICE_TYPE}}&device_vendor={{DEVICE_VENDOR}}&device_model={{DEVICE_MODEL}}&user_browser={{USER_BROWSER}}&user_browser_ver={{USER_BROWSER_VER}}&user_browser_ver_major={{USER_BROWSER_VER_MAJOR}}&user_browser_ver_minor={{USER_BROWSER_VER_MINOR}}&user_os={{USER_OS_NAME}}&user_os_ver_major={{USER_OS_VER_MAJOR}}&user_os_ver_minor={{USER_OS_VER_MINOR}}&vitrinatv_programme_id={{VITRINATV_PROGRAMME_ID}}'
+                                    }
+                                ],
+                                'tvis_creative_expanded': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://stat-analytics.mediavitrina.ru/?event=tvis_creative_expanded&player_id=13153&vitrina_id=941&player=web&epg_id=7&db=vgtrk_russia_1&version={{PLAYER_VERSION}}&sid={{SID}}&uid={{UID}}&location={{LOCATION}}&domain={{DOMAIN}}&mode={{MODE}}&event_ts={{EVENT_TS}}&client_timezone_offset={{CLIENT_TIME_ZONE_OFFSET}}&device={{DEVICE_TYPE}}&device_vendor={{DEVICE_VENDOR}}&device_model={{DEVICE_MODEL}}&user_browser={{USER_BROWSER}}&user_browser_ver={{USER_BROWSER_VER}}&user_browser_ver_major={{USER_BROWSER_VER_MAJOR}}&user_browser_ver_minor={{USER_BROWSER_VER_MINOR}}&user_os={{USER_OS_NAME}}&user_os_ver_major={{USER_OS_VER_MAJOR}}&user_os_ver_minor={{USER_OS_VER_MINOR}}&vitrinatv_programme_id={{VITRINATV_PROGRAMME_ID}}'
+                                    }
+                                ],
+                                'tvis_error': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://stat-analytics.mediavitrina.ru/?event=tvis_error&player_id=13153&vitrina_id=941&player=web&epg_id=7&db=vgtrk_russia_1&version={{PLAYER_VERSION}}&sid={{SID}}&uid={{UID}}&location={{LOCATION}}&domain={{DOMAIN}}&mode={{MODE}}&event_ts={{EVENT_TS}}&client_timezone_offset={{CLIENT_TIME_ZONE_OFFSET}}&device={{DEVICE_TYPE}}&device_vendor={{DEVICE_VENDOR}}&device_model={{DEVICE_MODEL}}&user_browser={{USER_BROWSER}}&user_browser_ver={{USER_BROWSER_VER}}&user_browser_ver_major={{USER_BROWSER_VER_MAJOR}}&user_browser_ver_minor={{USER_BROWSER_VER_MINOR}}&user_os={{USER_OS_NAME}}&user_os_ver_major={{USER_OS_VER_MAJOR}}&user_os_ver_minor={{USER_OS_VER_MINOR}}&vitrinatv_programme_id={{VITRINATV_PROGRAMME_ID}}'
+                                    }
+                                ],
+                                'apierror': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://stat-analytics.mediavitrina.ru/?event=apierror&player_id=13153&vitrina_id=941&player=web&epg_id=7&db=vgtrk_russia_1&version={{PLAYER_VERSION}}&sid={{SID}}&uid={{UID}}&location={{LOCATION}}&domain={{DOMAIN}}&mode={{MODE}}&event_ts={{EVENT_TS}}&client_timezone_offset={{CLIENT_TIME_ZONE_OFFSET}}&device={{DEVICE_TYPE}}&device_vendor={{DEVICE_VENDOR}}&device_model={{DEVICE_MODEL}}&user_browser={{USER_BROWSER}}&user_browser_ver={{USER_BROWSER_VER}}&user_browser_ver_major={{USER_BROWSER_VER_MAJOR}}&user_browser_ver_minor={{USER_BROWSER_VER_MINOR}}&user_os={{USER_OS_NAME}}&user_os_ver_major={{USER_OS_VER_MAJOR}}&user_os_ver_minor={{USER_OS_VER_MINOR}}&error_title={{ERROR_TITLE}}&error_adv={{ERROR_ADV}}&error_id={{ERROR_ID}}&vitrinatv_programme_id={{VITRINATV_PROGRAMME_ID}}'
+                                    }
+                                ],
+                            },
+                        },
+                        ecto_live: {
+                            defaultTitle: undefined,
+                            comBlockStartEnabled: false,
+                            liveTimeShift: 0
+                        },
+                        epg: {
+                            epg_url: 'https://static-api.mediavitrina.ru/v1/epg/russia1/lite_web.json',
+                        },
+                        epg_ui: {
+                            updateTimeline: false,
+                            titleTemplate: '{{title}}',
+                        },
+                        restrictions: {
+                            restrictions_url: 'https://static-api.mediavitrina.ru/v1/epg/russia1/restrictions.json',
+                            poster: 'https://staticmv.mediavitrina.ru/vitrina_assets/netprav/vgtrk_russia1_16x9_v1/vgtrk_russia1_16x9_v1.png',
+                        },
+                        quality: {
+                            labels: {'FHD': 'Full HD', 'HD': 'HD', 'HQ': 'High', 'SD': 'Middle', 'LQ': 'Low'},
+                            stickers: {'FHD': 'HD'},
+                            qualityOrder: ['FHD', 'HD', 'HQ', 'SD', 'LQ']
+                        },
+                        com: {
+                            intervals: {all: 20},
+                            useYandexSdkPlaceholders: true,
+                            preloadOnQuartile: 3,
+                        },
+                        com_schedule_loader: {
+                            adscheduleUrl: 'https://static-api.mediavitrina.ru/v1/epg/russia1/ad-injections.json',
+                            adscheduleIntervalSec: 5
+                        },
+                        com_scheduler: {
+                            seekToLiveAfterMidrolls: true
+                        },
+                        sergeant: {
+                            ignoreOn: {mobile: true},
+                        },
+                        tns_counter: {
+                            enabled: true,
+                            url: '//www.tns-counter.ru/V13a**catid:50:vcid:2961:vcver:0:fts:[FTS]:vts:[VTS]:evtp:[EventType]:dvtp:[DeviceType]**russia1_tv/ru/UTF-8/tmsec=russia1tv_russia1-hb30-1tv/'
+                        },
+                        vitrina_stat: {
+                            db: 'vgtrk_russia_1',
+                            epg_id: '7',
+                            player_id: '13153',
+                            vitrina_id: '941',
+                            user_storage_ident: 'vitrina_uid',
+                            enabled: true,
+                            debug_mode: false,
+                            url: 'https://stat-analytics.mediavitrina.ru/',
+                            player: 'web',
+                            extended_params: {measure_midroll_precision: false},
+                        },
+                        yandexmetrika: {
+                            counterId: '24831155',
+                            goals: {
+                                ready: {
+                                    goal: 'events/init/cast_id/' + live_id + '/sid/' + sid
+                                },
+                                play: {
+                                    goal: 'events/play/cast_id/' + live_id + '/sid/' + sid
+                                },
+                                playing: {
+                                    goal: 'events/start/cast_id/' + live_id + '/sid/' + sid
+                                },
+                                waiting: {
+                                    goal: 'events/lag/cast_id/' + live_id + '/sid/' + sid
+                                },
+                                pause: {
+                                    goal: 'events/pause/cast_id/' + live_id + '/sid/' + sid
+                                },
+                                preroll: {
+                                    goal: 'events/advRequested/cast_id/' + live_id + '/sid/' + sid + '/type/preroll/placementId/'
+                                },
+                                midroll: {
+                                    goal: 'events/advRequested/cast_id/' + live_id + '/sid/' + sid + '/type/midroll/placementId/'
+                                },
+                                postroll: {
+                                    goal: 'events/advRequested/cast_id/' + live_id + '/sid/' + sid + '/type/postroll/placementId/'
+                                },
+                                pauseroll: {
+                                    goal: 'events/advRequested/cast_id/' + live_id + '/sid/' + sid + '/type/pauseroll/placementId/'
+                                },
+                            }
+                        },
+                        cast_sender: {
+                            reciever_namespace:'urn:x-cast:tv.vitrina.caf',
+                            reciever_application_id: '2441E3B4',
+                            receiver_config_url: ''
+                        }
+                    }
+                ),
+            }
+        }
+    );
+</script>
+</body>
+</html>

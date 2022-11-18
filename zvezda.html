@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Прямой эфир. Телеканал «Звезда»</title>
+    <link rel=stylesheet href="//staticmv.mediavitrina.ru/dist/eump-core/v18.10.10/eump.min.css" type="text/css"/>
+    <link rel=stylesheet href="//staticmv.mediavitrina.ru/dist/eump-vitrina/v2.6.2/eump-vitrina.min.css" type="text/css"/>
+    <link href="//staticmv.mediavitrina.ru/vitrina_assets/v1.0.3/vitrina_preloader_logo.css" rel="stylesheet" type="text/css"/>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #000000
+        }
+
+        .eump-player {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0
+        }
+    </style>
+</head>
+<body>
+<script>
+    window.EUMPAssetsURL = "//staticmv.mediavitrina.ru/dist/eump-core/v18.10.10/";
+    
+    window.EUMPConfig = {
+        assetsURL: window.EUMPAssetsURL,
+        plugins: [
+            'quality', 'ecto_live', 'contextmenu', 'vitrina_stat', 'tns_counter',
+            'buffering_watchdog', 'epg', 'epg_ui', 'error_reporting', 'tracking'
+        ],
+        pluginsOpts: {
+            tracking: {
+                events_v2: {
+                    'first_play_or_ad': [
+                        {
+                            http_method: 'GET',
+                            url: 'https://tns-counter.ru/e/ec01&cid=vitrina_tv&typ=1&tms=1tv&idc=107&idlc={{VITRINATV_PROGRAMME_ID}}&ver=0&media=ЗВЕЗДА&type={{MEDIASCOPE2021_TYPE}}&fts={{STREAM_TS_MSEC}}&view=1'
+                        }
+                    ],
+                    'pause_start': [
+                        {
+                            http_method: 'GET',
+                            url: 'https://tns-counter.ru/e/ec01&cid=vitrina_tv&typ=1&tms=1tv&idc=107&idlc={{VITRINATV_PROGRAMME_ID}}&ver=0&media=ЗВЕЗДА&type={{MEDIASCOPE2021_TYPE}}&fts={{STREAM_TS_MSEC}}&view=3'
+                        }
+                    ],
+                    'pause_end': [
+                        {
+                            http_method: 'GET',
+                            url: 'https://tns-counter.ru/e/ec01&cid=vitrina_tv&typ=1&tms=1tv&idc=107&idlc={{VITRINATV_PROGRAMME_ID}}&ver=0&media=ЗВЕЗДА&type={{MEDIASCOPE2021_TYPE}}&fts={{STREAM_TS_MSEC}}&view=1'
+                        }
+                    ],
+                    'mediascope2021_heartbeat': [
+                        {
+                            http_method: 'GET',
+                            url: 'https://tns-counter.ru/e/ec01&cid=vitrina_tv&typ=1&tms=1tv&idc=107&idlc={{VITRINATV_PROGRAMME_ID}}&ver=0&media=ЗВЕЗДА&type={{MEDIASCOPE2021_TYPE}}&fts={{MEDIASCOPE2021_STREAM_TS_MSEC}}&view=2'
+                        }
+                    ],
+                    'apierror': [
+                        {
+                            http_method: 'GET',
+                            url: 'https://stat-analytics.mediavitrina.ru/?event=apierror&player_id=13135&vitrina_id=941&player=web&epg_id=43&db=zvezda&version={{PLAYER_VERSION}}&sid={{SID}}&uid={{UID}}&location={{LOCATION}}&domain={{DOMAIN}}&mode={{MODE}}&event_ts={{EVENT_TS}}&client_timezone_offset={{CLIENT_TIME_ZONE_OFFSET}}&device={{DEVICE_TYPE}}&device_vendor={{DEVICE_VENDOR}}&device_model={{DEVICE_MODEL}}&user_browser={{USER_BROWSER}}&user_browser_ver={{USER_BROWSER_VER}}&user_browser_ver_major={{USER_BROWSER_VER_MAJOR}}&user_browser_ver_minor={{USER_BROWSER_VER_MINOR}}&user_os={{USER_OS_NAME}}&user_os_ver_major={{USER_OS_VER_MAJOR}}&user_os_ver_minor={{USER_OS_VER_MINOR}}&error_title={{ERROR_TITLE}}&error_adv={{ERROR_ADV}}&error_id={{ERROR_ID}}&vitrinatv_programme_id={{VITRINATV_PROGRAMME_ID}}'
+                        }
+                    ],
+                },
+            },
+            ecto_live: {
+                defaultTitle: 'Прямой эфир. Телеканал «Звезда»',
+                comBlockStartEnabled: false
+            },
+            vitrina_stat: {
+                enabled: true,
+                user_storage_ident: 'vitrina_uid',
+                url: 'https://stat-analytics.mediavitrina.ru/',
+                player: 'web',
+                db: 'zvezda',
+                epg_id: 43,
+                player_id: 13135,
+                vitrina_id: 941
+            },
+            contextmenu: {
+                enabled: true
+            },
+            tns_counter: {
+                enabled: true,
+                url: '//www.tns-counter.ru/V13a**catid:21:vcid:258:vcver:0:fts:[FTS]:vts:[VTS]:evtp:[EventType]:dvtp:[DeviceType]**zvezda_tv/ru/UTF-8/tmsec=zvezda_zvezda-hb30-1tv/'
+            },
+            epg: {
+                epg_url: 'https://static-api.mediavitrina.ru/v1/epg/tvzvezda/lite_web.json'
+            },
+            epg_ui: {
+                titleTemplate: '{{title}}',
+            },
+            cast_sender: {
+                reciever_namespace:'urn:x-cast:tv.vitrina.caf',
+                reciever_application_id: '2441E3B4',
+                receiver_config_url: ''
+            },
+            quality: {
+                labels: {'FHD': 'Full HD', 'HD': 'HD', 'HQ': 'High', 'SD': 'Middle', 'LQ': 'Low'},
+                stickers: {'FHD': 'HD'},
+                qualityOrder: ['FHD', 'HD', 'HQ', 'SD', 'LQ']
+            }
+        },
+    };
+</script>
+<div class="eump-player eump-ratio-16x9" id="player"></div>
+<script src="//staticmv.mediavitrina.ru/dist/eump-core/v18.10.10/eump.all.min.js"></script>
+<script src="//staticmv.mediavitrina.ru/dist/eump-vitrina/v2.6.2/eump-vitrina.min.js"></script>
+
+
+
+
+        <script>
+        if (window.EUMPConfig && window.EUMPConfig.plugins) {
+            window.EUMPConfig.plugins.push('teleport');
+        }
+        </script>
+                <script>
+            if (window.EUMPConfig && window.EUMPConfig.pluginsOpts) {
+                window.EUMPConfig.pluginsOpts.teleport = {
+    "apiKey": "6a6b1b22ae31fb52",
+    "dashApiKey": "6a6b1b22ae31fb52",
+    "hlsApiKey": "42036852bb7fd522"
+}            }
+        </script>
+                <script>
+        if (window.EUMPConfig && window.EUMPConfig.plugins) {
+            window.EUMPConfig.plugins.push('remote');
+        }
+        </script>
+                <script>
+            if (window.EUMPConfig && window.EUMPConfig.pluginsOpts) {
+                window.EUMPConfig.pluginsOpts.remote = {
+    ignorePID: true,
+    allowDomains: ["mediavitrina.ru","*.mediavitrina.ru","1tv.ru","*.1tv.ru","cm.1tv.ru","*.cm.1tv.ru","stage.1tv.ru","*.stage.1tv.ru","dev.1tv.ru","*.dev.1tv.ru","local.1tv.ru:4000","*.local.1tv.ru:4000"],
+    controls: {
+        use: true,
+        mute: true,
+        errors: false
+    }
+}            }
+        </script>
+        
+<script>
+    window.load_player_msec = Date.now();
+    window.EUMP.i18nLang['ru']['Domain is not allowed'] = 'Размещение плеера на этом домене не разрешено<br/><br/><a href="https://tvzvezda.ru/" target="_blank">Смотрите прямой эфир на сайте tvzvezda.ru</a>';
+    window.EUMP.i18nLang['ru']['Watch on site'] = '<a href="https://tvzvezda.ru/" target="_blank">Смотрите прямой эфир на сайте tvzvezda.ru</a>';
+
+    let qualityDefinition = [
+        {name: 'LQ', rate: [0, 499]}, //350
+        {name: 'SD', rate: [500, 1999]}, //700
+        {name: 'HQ', rate: [2000, 4999]}, //3000
+        {name: 'HD', rate: [5000, 6999]}, //6000
+        {name: 'FHD', rate: [7000, 10000]}, //8000
+    ];
+    
+    initEUMPLivePlayer(
+        '#player',
+        {
+            srcOrder: ['mpdp', 'hlsp', 'hls'],
+            srcTypes: {
+                mpdp: {
+                    type: 'application/mpd+mp4',
+                    live: true
+                },
+                /*
+                m3u8p: {
+                    type: 'application/x-mpegURL',
+                    live: true
+                },
+                */
+                hlsp: {
+                    type: 'application/x-mpegURL',
+                    live: true
+                },
+                mpd: {
+                    type: 'application/mpd+mp4',
+                    live: true
+                },
+                hls: {
+                    type: 'application/x-mpegURL',
+                    live: true
+                }
+            },
+            start: 'visible',
+            api: {
+                protectionKey: {type: 'api'},
+                drm: {
+                    mpdp: [
+                        {
+                            type: 'com.widevine.alpha', 
+                            serverURL: 'https://drm99502.nowdrm.co/widevine'
+                        },
+                        {
+                            type: 'com.microsoft.playready',
+                            serverURL: 'https://drm99502.nowdrm.co/playready/rightsmanager.asmx'
+                        },
+                    ],
+                    hlsp: [
+                        {
+                            type: "com.apple.fps.1_0",
+                            licenseURL: 'https://drm99502.nowdrm.co/fairplay',
+                            certificateURL: 'https://staticmv.mediavitrina.ru/fairplay/1tv.der'
+                        },
+                    ]
+                },
+                sources: {
+                    url: 'https://media.mediavitrina.ru/api/v3/zvezda/playlist/zvezda_as_array.json?application_id={{APPLICATION_ID}}&player_referer_hostname={{PLAYER_REFERER_HOSTNAME}}&config_checksum_sha256={{CONFIG_CHECKSUM_SHA256}}&egress_version_id=1433749',
+                    type: 'json'
+                },
+            },
+            protectionKey: 'disabled',
+            intervals: {
+                protectionKey: 0
+            },
+            poster: 'https://staticmv.mediavitrina.ru/zvezda/zaglushka_efir_16x9.png',
+            allowedCountries: [],
+            disallowedCountries: [],
+            allowedDomains: ["mediavitrina.ru","*.mediavitrina.ru","1tv.ru","*.1tv.ru","cm.1tv.ru","*.cm.1tv.ru","stage.1tv.ru","*.stage.1tv.ru","dev.1tv.ru","*.dev.1tv.ru","local.1tv.ru:4000","*.local.1tv.ru:4000"],
+            playerOpts: {
+                initDelay: 500, // show vitrina logo
+                loaderAppearanceDelay: 200, // must be less then initDelay
+                assetsURL: window.EUMPAssetsURL,
+                lang: 'ru',
+                engines: ['html5shaka', 'html5p', 'html5hlsjs', 'html5'],
+                plugins: window.EUMPConfig.plugins,
+                pluginsOpts: window.EUMPConfig.pluginsOpts,
+                liveTimeOffset: -10800,
+                enginesOpts: {
+                    'html5hlsjs': {
+                        sourceCycles: 2,
+                        qualityDefinition: qualityDefinition,
+                        enabledOnMobile: true,
+                        enabledOnIOS: false,
+                        hlsPlayerOpts: {
+                            liveSyncDurationCount: 4,
+                            liveMaxLatencyDurationCount: 8
+                        },
+                        captions: {enabled: true},
+                        autoLevels: false,
+                        playsinline: true,
+                        nextLiveSourceOnEnded: true,
+                        enableSeekLiveOnMobile: true,
+                        liveTimeShift: 0,
+                    },
+                    'html5shaka': {
+                        sourceCycles: 2,
+                        dashClockSyncUri: 'https://media.mediavitrina.ru/current_unixtime',
+                        bufferingMonitor: {
+                            counterThreshold: 10
+                        },
+                        captions: {enabled: true},
+                        qualityDefinition: qualityDefinition,
+                        autoLevels: false,
+                        enabledOnMobile: true,
+                        playsinline: true,
+                        errorCounterLimit: 2,
+                        shakaPlayerOpts: {
+                            abr: {
+                                defaultBandwidthEstimate: 500000,
+                                switchInterval: 5
+                            },
+                            streaming: {
+                                bufferingGoal: 60,
+                                bufferBehind: 40,
+                                retryParameters: {maxAttempts: 2, timeout: 5500},
+                                startAtSegmentBoundary: false,
+                                ignoreTextStreamFailures: true,
+                                jumpLargeGaps: true,
+                                safeSeekOffset: 10
+                            },
+                            manifest: {
+                                retryParameters: {maxAttempts: 2, timeout: 7500}
+                            },
+                            drm: {
+                                retryParameters: {maxAttempts: 2, timeout: 5000}
+                            }
+                        },
+                        liveTimeShift: 0,
+                    },
+                    'html5': {
+                        sourceCycles: 2,
+                        captions: {enabled: true},
+                        useAndroidHLSFix: true,
+                        playsinline: true,
+                        liveTimeShift: 0,
+                    },
+                    html5p: {
+                        playsinline: true,
+                        captions: {enabled: true},
+                        liveTimeShift: 0,
+                        licenseParamsHandler: function (message, session, engine) {
+                            return JSON.stringify({content_id: 'skd://1f2640b8-7ed3-417e-95a4-23f6ac0690a3', spc_message: engine.base64EncodeUint8Array(message)});
+                        }
+                    }
+                },
+                
+            }
+        }
+    );
+</script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Межгосударственная телерадиокомпания «Мир»</title>
+    <link rel=stylesheet href="//staticmv.mediavitrina.ru/dist/eump-core/v18.10.10/eump.min.css" type="text/css"/>
+    <link rel=stylesheet href="//staticmv.mediavitrina.ru/dist/eump-vitrina/v2.6.2/eump-vitrina.min.css" type="text/css"/>
+    <link rel=stylesheet href="//staticmv.mediavitrina.ru/vitrina_assets/v1.0.3/vitrina_preloader_logo.css" type="text/css"/>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #000000
+        }
+
+        .eump-player {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0
+        }
+    </style>
+</head>
+<body>
+<script>
+    window.EUMPAssetsURL = "//staticmv.mediavitrina.ru/dist/eump-core/v18.10.10/";
+    window.EUMPConfig = {
+        assetsURL: window.EUMPAssetsURL,
+        plugins: [],
+        pluginsOpts: {}
+    };
+</script>
+<div class="eump-player eump-ratio-16x9" id="player"></div>
+<script src="//staticmv.mediavitrina.ru/dist/eump-core/v18.10.10/eump.all.min.js"></script>
+<script src="//staticmv.mediavitrina.ru/dist/eump-vitrina/v2.6.2/eump-vitrina.min.js"></script>
+
+
+
+
+
+        <script>
+        if (window.EUMPConfig && window.EUMPConfig.plugins) {
+            window.EUMPConfig.plugins.push('teleport');
+        }
+        </script>
+                <script>
+            if (window.EUMPConfig && window.EUMPConfig.pluginsOpts) {
+                window.EUMPConfig.pluginsOpts.teleport = {
+    "apiKey": "6a6b1b22ae31fb52",
+    "dashApiKey": "6a6b1b22ae31fb52",
+    "hlsApiKey": "42036852bb7fd522"
+}            }
+        </script>
+                <script>
+        if (window.EUMPConfig && window.EUMPConfig.plugins) {
+            window.EUMPConfig.plugins.push('remote');
+        }
+        </script>
+                <script>
+            if (window.EUMPConfig && window.EUMPConfig.pluginsOpts) {
+                window.EUMPConfig.pluginsOpts.remote = {
+    ignorePID: true,
+    allowDomains: ["mediavitrina.ru","*.mediavitrina.ru","1tv.ru","*.1tv.ru","cm.1tv.ru","*.cm.1tv.ru","stage.1tv.ru","*.stage.1tv.ru","dev.1tv.ru","*.dev.1tv.ru","local.1tv.ru:4000","*.local.1tv.ru:4000"],
+    controls: {
+        use: true,
+        mute: true,
+        errors: false
+    }
+}            }
+        </script>
+        
+<script>
+    window.load_player_msec = Date.now();
+    window.EUMP.i18nLang['ru']['Domain is not allowed'] = 'Размещение плеера на этом домене не разрешено<br/><br/><a href="https://mirtv.ru" target="_blank">Смотрите прямой эфир на сайте mirtv.ru</a>';
+    window.EUMP.i18nLang['ru']['Watch on site'] = '<a href="https://mirtv.ru/" target="_blank">Смотрите прямой эфир на сайте mirtv.ru</a>';
+    
+    let qualityDefinition = [
+        {name: 'LQ', rate: [0, 499]}, //350
+        {name: 'SD', rate: [500, 1999]}, //700
+        {name: 'HQ', rate: [2000, 4999]}, //3000
+        {name: 'HD', rate: [5000, 6999]}, //6000
+        {name: 'FHD', rate: [7000, 10000]}, //8000
+    ];
+    
+    initEUMPLivePlayer(
+        '#player',
+        {
+            srcOrder: ['mpdp', 'hlsp', 'hls'],
+            srcTypes: {
+                mpdp: {
+                    type: 'application/mpd+mp4',
+                    live: true
+                },
+                /*
+                m3u8p: {
+                    type: 'application/x-mpegURL',
+                    live: true
+                },
+                */
+                hlsp: {
+                    type: 'application/x-mpegURL',
+                    live: true
+                },
+                mpd: {
+                    type: 'application/mpd+mp4',
+                    live: true
+                },
+                hls: {
+                    type: 'application/x-mpegURL',
+                    live: true
+                }
+            },
+            start: 'visible',
+            api: {
+                protectionKey: {type: 'api'},
+                drm: {
+                    mpdp: [
+                        {
+                            type: 'com.widevine.alpha', 
+                            serverURL: 'https://drm99502.nowdrm.co/widevine'
+                        },
+                        {
+                            type: 'com.microsoft.playready',
+                            serverURL: 'https://drm99502.nowdrm.co/playready/rightsmanager.asmx'
+                        },
+                    ],
+                    hlsp: [
+                        {
+                            type: "com.apple.fps.1_0",
+                            licenseURL: 'https://drm99502.nowdrm.co/fairplay',
+                            certificateURL: 'https://staticmv.mediavitrina.ru/fairplay/1tv.der'
+                        },
+                    ]
+                },
+                sources: {
+                    url: 'https://media.mediavitrina.ru/api/v3/mtrkmir/playlist/mir_as_array.json?application_id={{APPLICATION_ID}}&player_referer_hostname={{PLAYER_REFERER_HOSTNAME}}&config_checksum_sha256={{CONFIG_CHECKSUM_SHA256}}&egress_version_id=1434577',
+                    type: 'json'
+                },
+            },
+            protectionKey: 'disabled',
+            intervals: {
+                protectionKey: 0
+            },
+            allowedCountries: ["RU"],
+            allowedDomains: ["mediavitrina.ru","*.mediavitrina.ru","1tv.ru","*.1tv.ru","cm.1tv.ru","*.cm.1tv.ru","stage.1tv.ru","*.stage.1tv.ru","dev.1tv.ru","*.dev.1tv.ru","local.1tv.ru:4000","*.local.1tv.ru:4000"],
+            geoRestrictionsPoster: '//staticmv.mediavitrina.ru/mtrkmir/geo-poster-mir.jpg',
+            poster: 'https://staticmv.mediavitrina.ru/mtrkmir/poster-mir.png',
+            playerOpts: {
+                initDelay: 0,
+                loaderAppearanceDelay: 200,
+                assetsURL: window.EUMPAssetsURL,
+                lang: 'ru',
+                liveTimeOffset: -10800,
+                engines: ['html5shaka', 'html5p', 'html5hlsjs', 'html5'],
+                enginesOpts: {
+                    html5hlsjs: {
+                        sourceCycles: 2,
+                        qualityDefinition: qualityDefinition,
+                        enabledOnMobile: true,
+                        enabledOnIOS: false,
+                        hlsPlayerOpts: {
+                            liveSyncDurationCount: 4,
+                            liveMaxLatencyDurationCount: 8
+                        },
+                        captions: {enabled: true},
+                        autoLevels: false,
+                        playsinline: true,
+                        nextLiveSourceOnEnded: true,
+                        enableSeekLiveOnMobile: true,
+                        liveTimeShift: 0,
+                    },
+                    html5shaka: {
+                        sourceCycles: 2,
+                        dashClockSyncUri: 'https://media.mediavitrina.ru/current_unixtime',
+                        bufferingMonitor: {
+                            counterThreshold: 10
+                        },
+                        captions: {enabled: true},
+                        qualityDefinition: qualityDefinition,
+                        autoLevels: false,
+                        enabledOnMobile: true,
+                        playsinline: true,
+                        errorCounterLimit: 2,
+                        shakaPlayerOpts: {
+                            abr: {
+                                defaultBandwidthEstimate: 500000,
+                                switchInterval: 5
+                            },
+                            streaming: {
+                                bufferingGoal: 60,
+                                bufferBehind: 40,
+                                retryParameters: {maxAttempts: 2, timeout: 5500},
+                                startAtSegmentBoundary: false,
+                                ignoreTextStreamFailures: true,
+                                jumpLargeGaps: true,
+                                safeSeekOffset: 30
+                            },
+                            manifest: {
+                                retryParameters: {maxAttempts: 2, timeout: 7500},
+                                dash: {
+                                    autoCorrectDrift: false
+                                }
+                            },
+                            drm: {
+                                retryParameters: {maxAttempts: 2, timeout: 5000}
+                            }
+                        },
+                        liveTimeShift: 0,
+                    },
+                    html5: {
+                        sourceCycles: 2,
+                        captions: {enabled: true},
+                        useAndroidHLSFix: true,
+                        playsinline: true,
+                        liveTimeShift: 0,
+                    },
+                    html5p: {
+                        playsinline: true,
+                        captions: {enabled: true},
+                        liveTimeShift: 0,
+                        licenseParamsHandler: function (message, session, engine) {
+                            return JSON.stringify({content_id: 'vitrina-hlsd_mir', spc_message: engine.base64EncodeUint8Array(message)});
+                        }
+                    }
+                },
+                plugins:
+                    [
+                        'quality', 'ecto_live', 'contextmenu', 'vitrina_stat',
+                        'tns_counter', 'buffering_watchdog', 'error_reporting',
+                        'tracking'
+                    ]
+                    .concat(window.EUMPConfig.plugins),
+                pluginsOpts: window.EUMP.fw.extend(
+                     window.EUMPConfig.pluginsOpts,
+                    {
+                        tracking: {
+                            events_v2: {
+                                'first_play_or_ad': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://tns-counter.ru/e/ec01&cid=vitrina_tv&typ=1&tms=1tv&idc=107&idlc={{VITRINATV_PROGRAMME_ID}}&ver=0&media=МИР&type={{MEDIASCOPE2021_TYPE}}&fts={{STREAM_TS_MSEC}}&view=1'
+                                    }
+                                ],
+                                'pause_start': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://tns-counter.ru/e/ec01&cid=vitrina_tv&typ=1&tms=1tv&idc=107&idlc={{VITRINATV_PROGRAMME_ID}}&ver=0&media=МИР&type={{MEDIASCOPE2021_TYPE}}&fts={{STREAM_TS_MSEC}}&view=3'
+                                    }
+                                ],
+                                'pause_end': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://tns-counter.ru/e/ec01&cid=vitrina_tv&typ=1&tms=1tv&idc=107&idlc={{VITRINATV_PROGRAMME_ID}}&ver=0&media=МИР&type={{MEDIASCOPE2021_TYPE}}&fts={{STREAM_TS_MSEC}}&view=1'
+                                    }
+                                ],
+                                'mediascope2021_heartbeat': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://tns-counter.ru/e/ec01&cid=vitrina_tv&typ=1&tms=1tv&idc=107&idlc={{VITRINATV_PROGRAMME_ID}}&ver=0&media=МИР&type={{MEDIASCOPE2021_TYPE}}&fts={{MEDIASCOPE2021_STREAM_TS_MSEC}}&view=2'
+                                    }
+                                ],
+                                'apierror': [
+                                    {
+                                        http_method: 'GET',
+                                        url: 'https://stat-analytics.mediavitrina.ru/?event=apierror&player_id=13141&vitrina_id=941&player=web&epg_id=35&db=mir&version={{PLAYER_VERSION}}&sid={{SID}}&uid={{UID}}&location={{LOCATION}}&domain={{DOMAIN}}&mode={{MODE}}&event_ts={{EVENT_TS}}&client_timezone_offset={{CLIENT_TIME_ZONE_OFFSET}}&device={{DEVICE_TYPE}}&device_vendor={{DEVICE_VENDOR}}&device_model={{DEVICE_MODEL}}&user_browser={{USER_BROWSER}}&user_browser_ver={{USER_BROWSER_VER}}&user_browser_ver_major={{USER_BROWSER_VER_MAJOR}}&user_browser_ver_minor={{USER_BROWSER_VER_MINOR}}&user_os={{USER_OS_NAME}}&user_os_ver_major={{USER_OS_VER_MAJOR}}&user_os_ver_minor={{USER_OS_VER_MINOR}}&error_title={{ERROR_TITLE}}&error_adv={{ERROR_ADV}}&error_id={{ERROR_ID}}&vitrinatv_programme_id={{VITRINATV_PROGRAMME_ID}}'
+                                    }
+                                ],
+                            },
+                        },
+                        ecto_live: {
+                            defaultTitle: 'ТК Мир. Прямой эфир',
+                            comBlockStartEnabled: false
+                        },
+                        vitrina_stat: {
+                            enabled: true,
+                            db: 'mir',
+                            user_storage_ident: 'vitrina_uid',
+                            url: 'https://stat-analytics.mediavitrina.ru/',
+                            player: 'web',
+                            epg_id: 35,
+                            player_id: 13141,
+                            vitrina_id: 941
+                        },
+                        quality: {
+                            labels: {'FHD': 'Full HD', 'HD': 'HD', 'HQ': 'High', 'SD': 'Middle', 'LQ': 'Low'},
+                            stickers: {'FHD': 'HD'},
+                            qualityOrder: ['FHD', 'HD', 'HQ', 'SD', 'LQ']
+                        },
+                        sergeant: {
+                            preventAutoStartItem: true,
+                            ignoreOn: {mobile: true},
+                            labels: {
+                                warning: '<p>Уважаемый зритель!</p><p>Похоже, у вас установлено программное обеспечение, которое блокирует показ <nobr>видео-рекламы.</nobr></p><p>При блокировании показа рекламы плеер может работать с ошибками.</p><p>Отключив блокировку рекламы, вы получите возможность смотреть видео в <nobr>высоком качестве!</nobr></p>'
+                            }
+                        },
+                        contextmenu: {
+                            enabled: true
+                        },
+                        cast_sender: {
+                            reciever_namespace:'urn:x-cast:tv.vitrina.caf',
+                            reciever_application_id: '2441E3B4',
+                            receiver_config_url: ''
+                        },
+                    }
+                ),
+            }
+        }
+    )
+</script>
+</body>
+</html>
